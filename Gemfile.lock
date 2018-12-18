@@ -98,6 +98,14 @@ PATH
       openproject-pdf_export (= 8.2.0)
 
 PATH
+  remote: modules/bim
+  specs:
+    openproject-bim (8.2.0)
+      activerecord-import
+      rails (~> 5)
+      rubyzip (~> 1.2)
+
+PATH
   remote: modules/costs
   specs:
     openproject-costs (8.2.0)
@@ -227,6 +235,8 @@ GEM
       activemodel (= 5.1.6.1)
       activesupport (= 5.1.6.1)
       arel (~> 8.0)
+    activerecord-import (0.28.0)
+      activerecord (>= 3.2)
     activerecord-session_store (1.1.1)
       actionpack (>= 4.0)
       activerecord (>= 4.0)
@@ -886,6 +896,7 @@ DEPENDENCIES
   openproject-auth_plugins!
   openproject-avatars!
   openproject-backlogs!
+  openproject-bim!
   openproject-costs!
   openproject-documents!
   openproject-github_integration!

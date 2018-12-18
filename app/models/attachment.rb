@@ -138,9 +138,13 @@ class Attachment < ActiveRecord::Base
 
   def file=(file)
     super.tap do
-      set_content_type file
       set_file_size file
-      set_digest file
+
+      set_content_type file
+
+      if File.readable? file.path
+        set_digest file
+      end
     end
   end
 
